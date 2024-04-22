@@ -10,39 +10,56 @@
 # Import libraries (Importar bibliotecas)
 import pyautogui, time
 
-# Pausa de 1 segundo entre cada comando
+# 1 second pause between each command (Pausa de 1 segundo entre cada comando)
 pyautogui.PAUSE = 1
-# Aperta a tecla do windows
-pyautogui.press('win')
-# Escreve o nome chrome na barra de pesquisa
+
+# Press the Windows key (Aperta a tecla do windows)
+pyautogui.press('win') 
+
+# Write the name chrome in the search bar (Escreve o nome chrome na barra de pesquisa)
 pyautogui.write('chrome')
-# Pressina a tecla ENTER para abrir o google chrome
+
+# Press the ENTER key to open Google Chrome (Pressiona a tecla ENTER para abrir o google chrome)
 pyautogui.press('enter')
-# Utilizando o método sleep para aguardar a tela carregar antes do próximo comando
+
+# Using the sleep method to wait for the screen to load before the next command (Utilizando o método sleep para aguardar a tela carregar antes do próximo comando)
 time.sleep(3)
-# Dando click na posição da tela onde se encontra a conta do google escolhida para navegar
+
+# Clicking on the position on the screen where the Google account chosen to browse is located (Dando click na posição da tela onde se encontra a conta do google escolhida para navegar)
 pyautogui.click(x=598, y=320)
-# Utilizando o método sleep novamente
+
+# Using the sleep method again (Utilizando o método sleep novamente)
 time.sleep(3)
-# Pegando a janela pelo título dela e armazenando na variável window
+
+# Taking the window by its title and storing it in the window variable (Pegando a janela pelo título dela e armazenando na variável window)
 window = pyautogui.getWindowsWithTitle('Nova guia')[0]
-# O método maximize irá maximizar a janela caso ela esteja minimizada
+
+# The maximize method will maximize the window if it is minimized (O método maximize irá maximizar a janela caso ela esteja minimizada)
 window.maximize()
-# Amazenando o link de acesso à página de login do sistema de cadastro de produtos em uma variável
+
+# Storing the access link to the product registration system login page in a variable (Amazenando o link de acesso à página de login do sistema de cadastro de produtos em uma variável)
 link = 'https://dlp.hashtagtreinamentos.com/python/intensivao/login'
-# Digitando o link de login
+
+# Entering the login link (Inserindo o link de login)
 pyautogui.write(link)
-# Pressionando a tecla enter para acessar a página
+
+# Pressing the enter key to access the page (Pressionando a tecla enter para acessar a página)
 pyautogui.press('enter')
-# Utilizando o método sleep novamente para aguardar o carregamento da página
+
+# Using the sleep method again to wait for the page to load (Utilizando o método sleep novamente para aguardar o carregamento da página)
 time.sleep(5)
-# Clicando na posição da tela onde o campo de email se encontra
+
+# Clicking on the position on the screen where the email field is located (Clicando na posição da tela onde o campo de email se encontra)
 pyautogui.click(x=437, y=410)
-# Escrevendo o email de login
+
+# Writing the login email (Escrevendo o email de login)
 pyautogui.write('test@gmail.com')
-# Pressionando a tecla TAB para o focus mudar para o campo de senha
+
+# Pressing the TAB key causes the focus to change to the password field (Pressionando a tecla TAB para o focus mudar para o campo de senha)
 pyautogui.press('tab')
-# Escrevendo a senha de login
+
+# Entering password to login (Digitando a senha de login)
 pyautogui.write('test7357')
-# Pressionando a tecla ENTER para efetuar login
+
+# Pressing the ENTER key to log in (Pressionando a tecla ENTER para efetuar login)
 pyautogui.press('enter')
